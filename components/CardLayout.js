@@ -1,5 +1,6 @@
 import React from 'react';
 import { getGithubNames } from '../Api/getGithubNames';
+import factCards from '../Api/factCards';
 import NameCard from './NameCard';
 
 export default class CardLayout extends React.Component {
@@ -10,8 +11,9 @@ export default class CardLayout extends React.Component {
     getGithubNames(
       'https://api.github.com/teams/2786804/members?access_token='
     ).then(data => {
-      this.setState({ teamData: data });
-      console.log(data);
+      const allCardData = data.concat(factCards);
+      this.setState({ teamData: allCardData });
+      console.log(allCardData);
     });
   }
   render() {
