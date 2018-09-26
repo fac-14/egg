@@ -18,11 +18,11 @@ export default class CardLayout extends React.Component {
     if (!this.state.teamData) {
       return <h3>...Loading</h3>;
     }
-    const { avatar_url, login } = this.state.teamData[1];
     return (
       <div>
-        {login}
-        <img />
+        {this.state.teamData.map(team => (
+          <NameCard key={team.id} {...team} />
+        ))}
       </div>
     );
   }
