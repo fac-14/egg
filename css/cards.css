@@ -1,0 +1,10 @@
+.card-fact, .card-name {
+  width: 10vw;
+  /* margin: 1rem; */
+  height: 15vw;
+}
+
+.imgFact, .imgAvatar {
+  margin: auto;
+  width: 10vw;
+}

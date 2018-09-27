@@ -14,17 +14,11 @@ import speakImg from '../assets/conversation.svg';
 import russiaImg from '../assets/russia.svg';
 const factCards = [
   {
-    id: 129338620,
-    imgFact: 'file-path',
-    fact: 'EXCLUDE - sangitas old github account'
-  },
-  {
     id: 194175810,
     imgFact: rabbitImg,
     fact: 'Their last name means rabbit in portugese'
   },
   { id: 197089210, imgFact: 'file-path', fact: 'They have pet gerbils' },
-  { id: 220131170, imgFact: 'file-path', fact: 'EXCLUDE - Yvonne' },
   { id: 237214860, imgFact: germanyImg, fact: 'They are german' },
   { id: 244095720, imgFact: almondImg, fact: 'Their name sounds like a nut' },
   {
