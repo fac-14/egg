@@ -8,9 +8,9 @@ const NameCard = ({ id, login, avatar_url, fact, imgFact }) => {
         src={imgFact ? imgFact : avatar_url}
         className={imgFact ? 'imgFact' : 'imgAvatar'}
       />
-      <h1 className={fact ? 'fact' : 'username'} value={id}>
+      <h4 className={fact ? 'fact' : 'username'} value={id}>
         {fact ? fact : login}
-      </h1>
+      </h4>
     </div>
   );
 };
