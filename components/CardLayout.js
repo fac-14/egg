@@ -7,30 +7,56 @@ import '../css/cards';
 
 export default class CardLayout extends React.Component {
   state = {
-    teamData: null
+    teamData: null,
+    clicked: []
   };
   componentDidMount() {
     getGithubNames(
       'https://api.github.com/teams/2786804/members?access_token='
     ).then(data => {
       const dataTwo = data.filter(filtered => {
-        return (filtered.id !== 12933862) && (filtered.id !== 22013117);
+        return filtered.id !== 12933862 && filtered.id !== 22013117;
       });
-
-      console.log(dataTwo);
-      const allCardData = data.concat(factCards);
+      const allCardData = dataTwo.concat(factCards);
       this.setState({ teamData: allCardData });
-      console.log(allCardData);
+      // console.log(allCardData);
     });
   }
+
+  handleOnClick = id => {
+    this.setState(prevState => {
+      const { clicked } = prevState;
+
+      // if id already exists
+      console.log(clicked);
+      if (clicked.length >= 1) {
+        if (id > 99999999) {
+          const match = clicked.includes(id / 10);
+          console.log(match);
+        } else {
+          const match1 = clicked.includes(id * 10);
+          console.log(match1);
+        }
+      }
+      // this.setState({ clicked: [] });
+      return { clicked: [id, ...clicked] };
+    });
+    console.log(this.state);
+  };
+
   render() {
     if (!this.state.teamData) {
       return <h3>...Loading</h3>;
     }
     return (
-      <div className='card-grid'>
+      <div className="card-grid">
         {this.state.teamData.map(team => (
-          <NameCard key={team.id} {...team} />
+          <NameCard
+            onClick={() => this.handleOnClick(team.id)}
+            chosen={this.state.clicked.includes(team.id)}
+            key={team.id}
+            {...team}
+          />
         ))}
       </div>
     );

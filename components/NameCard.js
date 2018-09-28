@@ -1,16 +1,30 @@
 import React from 'react';
+import cardImg from '../assets/black-jack.svg';
 
-const NameCard = ({ id, login, avatar_url, fact, imgFact }) => {
-  // console.log(id);
+const NameCard = ({
+  id,
+  login,
+  avatar_url,
+  fact,
+  imgFact,
+  onClick,
+  chosen
+}) => {
   return (
-    <div className={'card-' + (fact ? 'fact' : 'name')}>
-      <img
-        src={imgFact ? imgFact : avatar_url}
-        className={imgFact ? 'imgFact' : 'imgAvatar'}
-      />
-      <h4 className={fact ? 'fact' : 'username'} value={id}>
-        {fact ? fact : login}
-      </h4>
+    <div onClick={onClick} className="card-back">
+      {chosen ? (
+        <div className={'card-' + (fact ? 'fact' : 'name')}>
+          <img
+            src={imgFact ? imgFact : avatar_url}
+            className={imgFact ? 'imgFact' : 'imgAvatar'}
+          />
+          <p className={fact ? 'fact' : 'username'} value={id}>
+            {fact ? fact : login}
+          </p>
+        </div>
+      ) : (
+        <h1>FaC 14</h1>
+      )}
     </div>
   );
 };
