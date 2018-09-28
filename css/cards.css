@@ -8,7 +8,7 @@
   text-align: center;
   /* border: 2px solid #000; */
   outline: 1px double rgb(23, 129, 143);
-  outline-offset: -10px;
+  outline-offset: -5px;
 }
 
 .card-img {
@@ -37,7 +37,17 @@
   border-radius: 5px;
 }
 
+.imgFact {
+  width: 90%;
+  height: auto;
+  margin-top: 0.2rem;
+}
+
 .fact,
 .username {
   margin: 0;
+}
+
+.fact {
+  font-size: 0.75rem;
 }

@@ -12,13 +12,15 @@ import dogImg from '../assets/dog.svg';
 import medalImg from '../assets/silver-medal.svg';
 import speakImg from '../assets/conversation.svg';
 import russiaImg from '../assets/russia.svg';
+import athensImg from '../assets/parthenon.svg';
+import chinchillaImg from '../assets/chinchilla.png';
 const factCards = [
   {
     id: 194175810,
     imgFact: rabbitImg,
-    fact: 'Last name means rabbit in portugese'
+    fact: 'Last name = rabbit in portugese'
   },
-  { id: 197089210, imgFact: 'file-path', fact: 'They have pet gerbils' },
+  { id: 197089210, imgFact: chinchillaImg, fact: 'Has pet chinchillas' },
   { id: 237214860, imgFact: germanyImg, fact: "They're german" },
   { id: 244095720, imgFact: almondImg, fact: 'Name sounds like a nut' },
   {
@@ -30,12 +32,12 @@ const factCards = [
   {
     id: 298049330,
     imgFact: mosquitoImg,
-    fact: 'Bitten by a radioactive mosquito'
+    fact: 'Bitten by radioactive mosquito'
   },
   {
     id: 309636140,
     imgFact: bookImg,
-    fact: 'On the cover of a book'
+    fact: 'On a book cover'
   },
   { id: 318501240, imgFact: biscuitImg, fact: 'Loves Jaffa Cakes' },
   {
@@ -48,16 +50,16 @@ const factCards = [
     imgFact: dogImg,
     fact: 'Wants a dog'
   },
-  { id: 336875510, imgFact: 'file-path', fact: 'From Athens' },
+  { id: 336875510, imgFact: athensImg, fact: 'From Athens' },
   {
     id: 352417160,
     imgFact: russiaImg,
-    fact: 'Got in trouble at the russian border'
+    fact: 'Trouble at russian border'
   },
   {
     id: 371160610,
     imgFact: medalImg,
-    fact: '2nd in a taekwondo tournament'
+    fact: '2nd in taekwondo tournament'
   },
   {
     id: 372279040,
@@ -67,7 +69,7 @@ const factCards = [
   {
     id: 375204010,
     imgFact: guineaPigImg,
-    fact: 'Has a chubby guinea pig'
+    fact: 'Owns chubby guinea pig'
   }
 ];
 

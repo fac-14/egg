@@ -1,5 +1,6 @@
 import React from 'react';
 import { getGithubNames } from '../Api/getGithubNames';
+import { shuffleArray } from '../Api/shuffle';
 import factCards from '../Api/factCards';
 import NameCard from './NameCard';
 import '../css/card-layout';
@@ -17,9 +18,10 @@ export default class CardLayout extends React.Component {
       const dataTwo = data.filter(filtered => {
         return filtered.id !== 12933862 && filtered.id !== 22013117;
       });
-      const allCardData = dataTwo.concat(factCards);
+      const allCardData = shuffleArray(dataTwo.concat(factCards));
+      // const shuffledCards = shuffleArray(allCardData);
       this.setState({ teamData: allCardData });
-      // console.log(allCardData);
+      // console.log(shuffledCards);
     });
   }
 
